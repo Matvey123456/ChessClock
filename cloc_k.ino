@@ -23,7 +23,7 @@ int plusSeconds = 4;
 
 boolean player = false;
 boolean theEnd = false;
-
+//test
 void pick_digit(int digit) {
   digitalWrite(13, LOW);
   digitalWrite(12, LOW);
