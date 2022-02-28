@@ -13,13 +13,13 @@ int numbers[10][7] = {
                     {1,1,1,1,0,1,1},
                     };
 
-int ATimeM = 7;
+int ATimeM = 3;
 int ATimeS = 0;
 
-int BTimeM = 7;
+int BTimeM = 3;
 int BTimeS = 0;
 
-int plusSeconds = 4;
+int plusSeconds = 2;
 
 boolean player = false;
 boolean theEnd = false;
