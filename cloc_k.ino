@@ -13,8 +13,8 @@ int numbers[10][7] = {
                     {1,1,1,1,0,1,1},
                     };
 
-int ATimeM = 3;
-int ATimeS = 0;
+int ATimeM = 0;
+int ATimeS = 30;
 
 int BTimeM = 3;
 int BTimeS = 0;
@@ -160,10 +160,10 @@ void setup() {
 }
 
 void loop() { 
-  TimeLimit();
-    
-  button();
-
+  if(!theEnd){
+    TimeLimit();  
+    button();
+  }
   if(player){
     if(second() > 0 && !theEnd){
       ATimeS--;
@@ -182,11 +182,7 @@ void loop() {
 
 void TimeLimit(){
 
-  if(ATimeM < 0|| BTimeM < 0){
-    ATimeS = 0;
-    BTimeS = 0;
-    ATimeM = 0;
-    BTimeM = 0;
+  if(ATimeS == 0 && ATimeM == 0||BTimeS == 0 && BTimeM == 0){
     theEnd = true;  
   }
   if(ATimeS < 0){
